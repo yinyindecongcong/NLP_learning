@@ -12,7 +12,7 @@
 
 [FastText模型](https://blog.csdn.net/qq_36153312/article/details/87897054)：[Bag of Tricks for Efficient Text Classification](https://arxiv.org/abs/1607.01759)
 
-代码模块：超参数设置 -- 参数初始化 -- inference -- 设置loss节点train_op
+代码模块：超参数设置 -- 设置输入 -- 参数初始化 -- inference -- 设置loss节点train_op
 
 **其中，inference包括embedding -- 线性分类器**
 
@@ -26,9 +26,14 @@
 
 [TextCNN模型](https://blog.csdn.net/qq_36153312/article/details/87936886)：[Convolutional Neural Networks for Sentence Classification](http://www.aclweb.org/anthology/D14-1181)
 
-代码模块：超参数设置 -- 参数初始化 -- inference -- 设置loss节点train_op
+代码模块：超参数设置 -- 设置输入 -- 参数初始化 -- inference -- 设置loss节点train_op
 
-其中，inference包括embedding -- 卷积[conv2d - BN - ReLU - max_pooling - dropout - dense] -- 线性分类器
+**其中，inference包括embedding -- 卷积[conv2d - BN - ReLU - max_pooling - dropout - dense] -- 线性分类器**
+
+* **单标签**
+  * 只使用预训练的char embedding和title char、desc char，假设每个问题只有一个标签，共1999个
+  * 仍使用FastText/pre_processing.ipynb对数据进行预处理，即数据与FastText相同
+  * 
 
 ### Reference
 

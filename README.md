@@ -10,6 +10,16 @@
 
 [记录TensorFlow学习中的参考文档](https://blog.csdn.net/qq_36153312/article/details/87896720)
 
+[FastText模型原理](https://blog.csdn.net/qq_36153312/article/details/87897054)
+
+[TextCNN模型原理](https://blog.csdn.net/qq_36153312/article/details/87936886)
+
+[RNN与LSTM模型原理](https://blog.csdn.net/qq_36153312/article/details/88698410)
+
+[Seq2Seq -- Attention -- Transformer](https://blog.csdn.net/qq_36153312/article/details/88770856)
+
+### 模型实现笔记
+
 [FastText模型](https://blog.csdn.net/qq_36153312/article/details/87897054)：[Bag of Tricks for Efficient Text Classification](https://arxiv.org/abs/1607.01759)
 
 代码模块：超参数设置 -- 设置输入 -- 参数初始化 -- inference -- 设置loss节点train_op
@@ -36,7 +46,7 @@
 * **单标签**
   * 只使用预训练的char embedding和title char、desc char，假设每个问题只有一个标签，共1999个
   * 仍使用FastText/pre_processing.ipynb对数据进行预处理，即数据与FastText相同
-  * 准确率约为20%
+  * 准确率约为0.20
 * **多标签**
   - 只使用预训练的char embedding和title char、desc char，每个问题有至多5个标签
   - FastText/pre_processing_multilabel.ipynb对数据进行预处理，或直接使用上述github中提供的处理好的数据
@@ -53,11 +63,11 @@
 - **单标签**
   - 只使用预训练的char embedding和title char、desc char，假设每个问题只有一个标签，共1999个
   - 仍使用FastText/pre_processing.ipynb对数据进行预处理，即数据与FastText相同
-  - 准确率约为
+  - 随机初始化embedding时准确率约为0.281，使用embedding（trainable）准确率约为0.294
 - **多标签**
   - 只使用预训练的char embedding和title char、desc char，每个问题有至多5个标签
   - FastText/pre_processing_multilabel.ipynb对数据进行预处理，或直接使用上述github中提供的处理好的数据
-  - F1 score最高为
+  - F1 score最高为0.301
 
 
 
